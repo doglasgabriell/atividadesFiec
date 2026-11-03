@@ -26,6 +26,9 @@ class Song extends Model
     protected function durationFormatted(): Attribute
     {
         return Attribute::make(
+        // Nao passamos parametro pq nao precisamos acessar um valor externo para executala
+        // sprintf => formatwr strings
+        // %d numero inteiro, 2 => pelo menos dois caracteres, 0 => espaços restantes termina em zero
             get: fn() => sprintf(
                 '%02d:%02d',
                 intdiv((int) $this->seconds, 60),
