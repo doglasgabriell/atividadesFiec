@@ -1,0 +1,33 @@
+1. No tour da AWS, vemos geradores imensos, sistemas de resfriamento e milhares de
+quilômetros de cabos. Escolha um componente físico que você viu e descreva
+brevemente como a falha desse componente específico impactaria diretamente
+a Agilidade nos Processos e a Disponibilidade
+	R: sistema de resfriamento. Ele mantém os servidores em uma temperatura adequada para seu funcionamento. Se esse sistema falhar, os servidores podem superaquecer, causando desligamentos automáticos ou danos aos equipamentos.
+
+2. A segurança dos dados é um ponto que deve ser considerado com atenção na
+decisão de migração de uma infraestrutura própria para a nuvem, e a AWS mostra suas
+camadas de segurança física (perímetro, salas de dados, biometria) adotadas para
+buscar mitigar possíveis riscos. Neste cenário, por que podemos afirmar que uma
+empresa pequena teria mais dificuldade em garantir a segurança de seus dados em
+um servidor local do que em um provedor de nuvem pública?
+	R: Uma empresa pequena geralmente possui recursos financeiros e técnicos limitados para investir em segurança física. Já provedores como a AWS investem bilhões em infraestrutura muito mais do que uma empresa pequena poderia investir
+
+3. No vídeo, podemos ver funcionários substituindo servidores inteiros ou discos
+rígidos em racks. Eles estão trabalhando para manter os serviços de SaaS, PaaS ou
+IaaS? Justifique sua resposta.
+	R: manter a IaaS porque eles realizam manutenção da infraestrutura física, como servidores, discos rígidos, redes e racks.
+
+4. De que forma o valor gasto com computação em nuvem pode reduzir custos de
+infraestrutura para empresas ao mesmo tempo que o investimento efetuado pela AWS
+em manutenção constante para manter o perfeito funcionamento dos serviços
+provisionados é claramente muito alto?
+	R: Talvez porque a AWS custeia para garantir que seus serviços em nuvens não falhem absolutamente em nada. Eles operam com total efetividade para garantir o perfeito funcionamento dos sistema. Deste modo, o custo de investimento é muito mais alto para empresas que não investem tanto na manutenção e sim no lucro ativo dos serviços.
+
+5. Como a infraestrutura física apresentada (robótica, sensores, monitoramento)
+permite que os clientes configurem e utilizem todos os recursos oferecidos sem a
+necessidade de contato ou liberação humana?
+	R: Os aparelhos utilizam sensores, robôs e sistemas de monitoramento que detectam automaticamente falhas e controlam o funcionamento dos equipamentos. Desta forma, elimina a intervenção da mão humana.
+
+6. Descreva brevemente de que maneira a localização física dos Data Centers (Regiões
+e Zonas de Disponibilidade) pode ser muito importante para os usuários.
+	R: Zonas com alta disponibilidade de rede, facilitam e melhora o uso e a conexão da rede com os usuários. Zonas de alta dificuldade ocasionam baixa latência. Geograficamente, uma zona com boa amplificação e cobertura de conexão, elimina as chances, de caimento de rede, baixa latência e etc

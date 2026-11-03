@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Livraria</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+
+    <header class="d-flex header justify-content-around align-items-center p-3 gap-3 sticky-top"
+        style="background-color: #642800;">
+
+        <div class="d-flex gap-2 align-items-center">
+            <i class="bi bi-book fs-1 text-light"></i>
+            <h1 class="text-light">Minha livraria</h1>
+        </div>
+        <nav class="d-flex gap-3 align-items-center fs-4 ">
+            <a href="#inicio">Inicio</a>
+            <a href="#livros">Livros</a>
+            <a href="#clubeDolivro">Clube de livros</a>
+            <a href="#contato">Contato</a>
+            <button class="btn btn-outline-light bg-transparent" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#menuLivraria">
+                Menu
+            </button>
+        </nav>
+
+    </header>
+
+
+
+    <!-- BANNER 1 -->
+    <section id="inicio" class="banners banner-1 text-center">
+        <div class="banners-titulo p-2">
+            <h1 class="display-4 fw-bold text-white">Minha Livraria</h1>
+            <p class="lead mb-0 fw-bold">Um espaço para novas histórias e novos mundos.</p>
+        </div>
+    </section>
+
+
+
+    <section id="livros" class="p-5">
+        <div class="d-flex flex-column gap-5 ">
+
+            <div class="d-flex flex-column justify-content-center align-items-center">
+                <h2>Sugestões de leitura</h2>
+                <p>
+                    Conheça algumas obras que podem fazer parte da sua próxima leitura.
+                </p>
+            </div>
+
+            <div class="d-flex gap-5 justify-content-center">
+
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top"
+                        src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?auto=format&fit=crop&w=700&q=80"
+                        alt="Livros empilhados sobre uma mesa" style="object-fit: cover; height: 230px;">
+                    <div class="card-body">
+                        <h3 class="card-title">A Biblioteca da Meia-Noite</h3>
+                        <p class="card-text">
+                            Uma história sobre escolhas, possibilidades e os caminhos que uma vida pode tomar.
+                        </p>
+                        <button class="btn btn-secondary " type="button" data-bs-toggle="modal"
+                            data-bs-target="#modalLivro1">
+                            Saiba mais
+                        </button>
+                        
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top"
+                        src="https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=700&q=80"
+                        alt="Livro aberto sobre uma mesa" style="object-fit: cover; height: 230px;">
+                    <div class="card-body">
+                        <h3 class="card-title">O Pequeno Príncipe</h3>
+                        <p class="card-text">
+                            Uma narrativa sobre amizade, afeto e a maneira como enxergamos o mundo.
+                        </p>
+                        <button class="btn btn-secondary " type="button" data-bs-toggle="modal"
+                            data-bs-target="#modalLivro2">
+                            Saiba mais
+                        </button>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top"
+                        src="https://images.unsplash.com/photo-1519682337058-a94d519337bc?auto=format&fit=crop&w=700&q=80"
+                        alt="Livros e caderno em um ambiente de estudo" style="object-fit: cover; height: 230px;">
+                    <div class="card-body">
+                        <h3 class="card-title">Hábitos Atômicos</h3>
+                        <p class="card-text">
+                            Reflexões sobre hábitos e sobre como pequenas ações podem contribuir para mudanças.
+                        </p>
+                        <button class="btn btn-secondary " type="button" data-bs-toggle="modal"
+                            data-bs-target="#modalLivro3">
+                            Saiba mais
+                        </button>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top"
+                        src="https://images.unsplash.com/photo-1516979187457-637abb4f9353?auto=format&fit=crop&w=700&q=80"
+                        alt="Pessoa lendo um livro junto à janela" style="object-fit: cover; height: 230px;">
+                    <div class="card-body">
+                        <h3 class="card-title">O Hobbit</h3>
+                        <p class="card-text">
+                            Uma aventura que reúne descobertas, coragem, amizade e criaturas extraordinárias.
+                        </p>
+                        <button class="btn btn-secondary " type="button" data-bs-toggle="modal"
+                            data-bs-target="#modalLivro4">
+                            Saiba mais
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        </div>
+    </section>
+
+
+    <!-- SEGUNDO BANNER -->
+   <section id="clubeDolivro" class="banners banner-2 text-center">
+        <div class="banners-titulo p-2 d-flex flex-column gap-4 align-items-center">
+            <h1 class="display-4 fw-bold text-white">Clube do livro</h1>
+            <p class="lead mb-0 fw-bold">Um espaço para conversar sobre histórias, compartilhar opniões e descobrir novas leituras.</p>
+            <a href="#contato" class="btnQueroParticipar" type="button" id="#contato">Quero participar</a>
+        </div>
+    </section>
+
+
+
+
+    <section>
+        <div class="d-flex flex-column gap-2">
+
+            <h2 class="px-3">Perguntas frequentes</h2>
+
+            <div id="accordionLivraria" class="d-flex flex-column">
+                <!-- Como participar do clube -->
+                <div class="border w-100 p-3">
+                    <div class="d-flex justify-content-between">
+                        <h3>Como participar do Clube do Livro?</h3>
+                        <button class="btn btn-secondary fw-bold align-self-center" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#pergunta1">></button>
+                    </div>
+
+                    <div id="pergunta1" class="collapse">
+                        <div>
+                            Envie uma mensagem pelo formulário de contato demonstrando
+                            seu interesse. Informaremos as próximas leituras e datas.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sugestao do livro -->
+                <div class="border w-100 p-3">
+                    <div class="d-flex justify-content-between">
+                        <h3>Posso sugerir um livro para o clube?</h3>
+                        <button class="btn btn-secondary fw-bold align-self-center" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#pergunta2">></button>
+                    </div>
+
+                    <div id="pergunta2" class="collapse">
+                        <div>
+                            Sim. As sugestões dos participantes podem ser consideradas
+                            na escolha das próximas leituras.
+                        </div>
+                    </div>
+                </div>
+
+                <!--  -->
+                <div class="border w-100 p-3">
+                    <div class="d-flex justify-content-between">
+                        <h3>Preciso ser um leitor experiente?</h3>
+                        <button class="btn btn-secondary fw-bold align-self-center" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#pergunta3">></button>
+                    </div>
+
+                    <div id="pergunta3" class="collapse">
+                        <div>
+                            Não. A proposta é reunir pessoas com diferentes hábitos
+                            de leitura para conversar e compartilhar experiências.
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+    </section>
+
+
+    <!-- FORMULÁRIO -->
+
+    <section id="contato">
+        <div class="d-flex w-100 justify-content-center align-items-center p-5">
+            <div class="bg-transparent border border-3 p-5 d-flex flex-column w-50">
+                <h2 class="title-forms">Entre em contato</h2>
+
+                <form class="d-flex flex-column gap-3">
+
+                    <div class="form-floating"><input type="email" class="form-control" id="floatingInput"
+                            aria-describedby="name" placeholder="Nome">
+                        <label for="floatingInput">Nome</label>
+                    </div>
+
+                    <div class="form-floating">
+                        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                        <label for="floatingInput">Email address</label>
+                    </div>
+
+                    <div class="form-floating">
+                        <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                            <option selected>Assunto</option>
+                            <option value="1">...</option>
+                            <option value="2">...</option>
+                            <option value="3">...</option>
+                        </select>
+                        <label for="floatingSelect">selecione um assunto</label>
+                    </div>
+
+                    <div class="form-floating">
+                        <textarea class="form-control" placeholder="Leave a comment here"
+                            id="floatingTextarea"></textarea>
+                        <label for="floatingTextarea">Coment[ario</label>
+                    </div>
+
+                    <button class="p-2 btn btn-success" type="submit">Enviar mensagem</button>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- RODAPÉ -->
+
+    <footer class="d-flex justify-content-center align-items-center text-center p-4">
+        <div>
+            <h2>Livraria</h2>
+            <p>Livros, histórias e encontros.</p>
+
+            <div class="d-flex gap-3">
+                <a href="#inicio">Início</a>
+                <a href="#livros">Livros</a>
+                <a href="#clubeDolivro">Clube do Livro</a>
+                <a href="#contato">Contato</a>
+            </div>
+
+
+        </div>
+    </footer>
+
+
+    <!-- OFFCANVAS aberto no Menu -->
+
+    <div class="offcanvas offcanvas-end" tabindex="1" id="menuLivraria" aria-labelledby="menulivrariaLabel">
+
+        <div class="offcanvas-header">
+            <h2 class="offcanvas-title">Livraria</h2>
+
+            <button class="btn-close" type="button" data-bs-dismiss="offcanvas">
+            </button>
+        </div>
+
+        <div class="offcanvas-body">
+            <p>
+                Uma livraria pensada para quem gosta de descobrir histórias
+                e compartilhar experiências de leitura.
+            </p>
+
+            <div class="aCanvas d-flex gap-3">
+                <a href="#inicio" data-bs-dismiss="offcanvas">Início</a>
+                <a href="#livros" data-bs-dismiss="offcanvas">Sugestões de leitura</a>
+                <a href="#clubeDolivro" data-bs-dismiss="offcanvas">Clube do Livro</a>
+                <a href="#contato" data-bs-dismiss="offcanvas">Contato</a>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- MODAIS -->
+
+    <div class="modal" tabindex="-1" id="modalLivro1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h2 class="modal-title">A bilioteca da meia noite</h2>
+                </div>
+
+                <div class="modal-body">
+                    <p><strong>Gênero:</strong> Ficção</p>
+                    <p>
+                        Uma narrativa que convida o leitor a refletir sobre escolhas, possibilidades e difernetes caminhos de uma vida
+                    </p>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" data-bs-dismiss="modal">Fechar</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" tabindex="-1" id="modalLivro2">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h2 class="modal-title">O Pequeno Príncipe</h2>
+                </div>
+
+                <div class="modal-body">
+                    <p><strong>Gênero:</strong> Fábula / clássico</p>
+                    <p>
+                        Uma história que aborda amizade, cuidado, responsabilidade
+                        e diferentes maneiras de observar o mundo.
+                    </p>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" data-bs-dismiss="modal">Fechar</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal" id="modalLivro3">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h2 class="modal-title">Hábitos Atômicos</h2>
+                </div>
+
+                <div class="modal-body">
+                    <p><strong>Gênero:</strong> Desenvolvimento pessoal</p>
+                    <p>
+                        Reflexões e estratégias para compreender a formação de hábitos
+                        e o impacto de pequenas mudanças consistentes.
+                    </p>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" data-bs-dismiss="modal">Fechar</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal" id="modalLivro4">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h2 class="modal-title">O Hobbit</h2>
+                </div>
+
+                <div class="modal-body">
+                    <p><strong>Gênero:</strong> Fantasia / aventura</p>
+                    <p>
+                        Uma aventura que reúne descobertas, coragem, amizade
+                        e uma jornada inesperada.
+                    </p>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" data-bs-dismiss="modal">Fechar</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

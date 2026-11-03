@@ -1,0 +1,97 @@
+/* cores sugeridas */
+:root {
+  --creme: #F5EDE3;
+  --cafe: #4A2C20;
+  --marrom: #795548;
+  --terracota: #B85C38;
+  --bege: #D8C3A5;
+  --escuro: #2B211D;
+}
+
+
+.banner-1 {
+  background-image: 
+          linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.3)), /* Camada de opacidade */
+          url("https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&w=1800&q=85");
+}
+
+.banner-2 {
+  background-image: url("https://images.unsplash.com/photo-1544947950-fa07a98d237f?auto=format&fit=crop&w=700&q=80");
+}
+
+/* Parallax */
+
+.banners {
+      width: 100%;
+      height: 10vh;
+      min-height: 100vh;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+}
+
+.btnQueroParticipar {
+  background-color: var(--cafe);
+  padding: 10px;
+  color: var(--creme);
+  font-weight: bold;
+  border-radius: 20px;
+  border: 1px solid var(--creme);
+  transition: all 0.7s ease;
+}
+
+.btnQueroParticipar, a {
+  text-decoration: none;
+}
+
+.btnQueroParticipar:hover {
+  background-color: var(--marrom);
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--bege);
+}
+
+.banners-titulo {
+    background-color: var(--terracota);
+}
+
+.banners-titulo > p {
+    color: var(--cafe);
+}
+
+.title-forms {
+  color: var(--escuro);
+}
+
+footer {
+  background-color: var(--cafe);
+}
+
+footer h2 {
+  color: var(--bege);
+}
+
+footer p {
+  color: var(--creme);
+}
+
+footer a {
+  text-decoration: none;
+  color: var(--terracota);
+}
+
+.aCanvas a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.aCanvas a:hover {
+  color: #2B211D;
+}

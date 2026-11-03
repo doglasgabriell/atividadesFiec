@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal de Serviços</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container">
+            <p class="logo">Portal de Serviços</p>
+            <p class="subtitle">
+                Encontre informações e acompanhe suas solicitações.
+            </p>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1>Meus serviços</h1>
+        <!-- Inserir dois atributos aria na tag button abaixo, indicando estado (filtros expandidos) e propriedade (controle sobre a área de filtros) -->
+        <button id="filterButton" class="filter-button" type="button" aria-expanded="filtro-expandidos"
+            aria-controls="Botão que controla os filtros">
+            Mostrar filtros
+        </button>
+
+        <!-- Inserir atributo aria na tag abaixo, indicando propriedade: qual elemento fornece o título da seção -->
+        <section id="filters" class="filters">
+            <h2 id="filters-title" aria-labelledby="nome da seção">Pesquisar serviços</h2>
+            <label for="service">
+                Nome ou número do serviço
+            </label>
+            <input type="text" id="service" placeholder="Ex.: 1025">
+            <button type="button" role="button">
+                Pesquisar
+            </button>
+        </section>
+
+        <!-- Inserir dois atributos aria na div a seguir, sendo um para indicar o papel de conjunto de abas e outro, 
+     uma propriedade que forneça um nome (label) adequado à área -->
+        <div role="conjunto de filtros de processo" class="tabs">
+
+            <!-- Para as tags button a seguir, que já possuem o atributo aria-controls, insira também os dois atributos que indiquem o papel(role) e o estado: selecionado ou não  -->
+            <button id="tab-todos" role="botao-todos-servicos" aria-selected="true" class="tab active"
+                aria-controls="todos">
+                Todos
+            </button>
+
+            <button id="tab-andamento" role="botao-servicos-em-andamento" class="tab" aria-selected="false"
+                aria-controls="andamento">
+                Em andamento
+            </button>
+
+            <button id="tab-concluido" role="botao-servicos-concluidos" aria-selected="false" class="tab"
+                aria-controls="concluido">
+                Concluídos
+            </button>
+        </div>
+
+        <!-- Na tags sections a seguir, insira o atributo aria que identifica o papel da seção: conteúdo associado à aba. Ela já contém o 
+     nome conforme o título herdado do botão tab-todos (aria-labelledby) -->
+        <section role="agrupamento-de-todos-os-servicos" id="todos" class="tab-content active"
+            aria-labelledby="tab-todos">
+
+            <h2>Todos os serviços</h2>
+            <article class="service-card">
+                <h3>Solicitação #1025</h3>
+                <p>
+                    Atualização de cadastro
+                </p>
+
+                <p>
+                    Status: Em andamento
+                </p>
+
+                <button role="button" type="button">
+                    Ver detalhes
+                </button>
+
+            </article>
+            <article class="service-card">
+                <h3>Solicitação #1026</h3>
+                <p>
+                    Emissão de documento
+                </p>
+                <p>
+                    Status: Concluído
+                </p>
+                <button role="button" type="button">
+                    Ver detalhes
+                </button>
+            </article>
+        </section>
+        <!-- Inserir atributo aria na tag abaixo -->
+        <section role="agrupamento-de-serviços-em-andamento" id="andamento" class="tab-content" aria-labelledby="tab-andamento">
+
+            <h2>Serviços em andamento</h2>
+            <article class="service-card">
+                <h3>Solicitação #1025</h3>
+                <p>
+                    Atualização de cadastro
+                </p>
+                <p>
+                    Status: Em andamento
+                </p>
+                <button role="button" type="button">
+                    Ver detalhes
+                </button>
+            </article>
+        </section>
+
+        <!-- Inserir atributo aria na tag abaixo -->
+        <section role="agrupamento-de-serviços-concluídos" id="concluido" class="tab-content" aria-labelledby="tab-concluido">
+            <h2>Serviços concluídos</h2>
+            <article class="service-card">
+                <h3>Solicitação #1026</h3>
+                <p>
+                    Emissão de documento
+                </p>
+                <p>
+                    Status: Concluído
+                </p>
+                <button role="button" type="button">
+                    Ver detalhes
+                </button>
+            </article>
+        </section>
+        <div class="result-message" aria-live="polite">
+            2 serviços encontrados.
+
+        </div>
+
+
+    </main>
+
+</body>
+
+</html>

@@ -1,0 +1,90 @@
+Atividade: Escolhendo a melhor solução de virtualização
+
+Cenário 1 – Sistema legado da empresa
+Máquina Virtual
+O sistema só funciona em Windows Server 2012, mas o servidor físico usa Linux. Uma maquina virtual permite rodar um SO completo diferente
+
+Desempenho: aceitável sem exigência alta.
+Consumo de recursos: maior que container, por conta do SO própria.
+Facilidade de implantação: simples, criar um maquina virtual.
+Isolamento: alto, totalmente separado do host Linux.
+Compatibilidade com SO: VM é compatível
+
+Cenário 2 – Ambiente de desenvolvimento
+Escolha: Container
+O container empacota todos os recursos necessários e aplica na outra maquina
+desempenho: próximo do nativo.
+consumo de recursos: leve para rodar em qualquer notebook.
+Facilidade de implantação: muito alta.
+isolamento: suficiente para desenvolvimento.
+vompatibilidade com SO: funciona sobre Windows, Linux e macOS
+
+Cenário 3 – Laboratório de Sistemas Operacionais
+Escolha: Máquina Virtual
+Os alunos precisam instalar SOs completos e diferentes, e o computador deve voltar ao estado original depois melhor coisa é o VM
+Desempenho: suficiente.
+consumo de recursos: alto
+facilidade de implantação: fácil restaurar ao estado original.
+osolamento: total, protege o SO principal do laboratório.
+Compatibilidade com SO:permite instalar SOs totalmente diferente
+
+Cenário 4 – Startup de comércio eletrônico
+Escolha: Container
+Vários microsserviços independentes, atualizados com frequência e reiniciados sem afetar os demais
+desempenho: ótimo
+consumo de recursos: mínimo
+facilidade de implantação: muito alta
+isolamento: suficiente entre serviços 
+compatibilidade com SO: todos os serviços podem compartilhar o mesmo kernel Linux.
+
+Cenário 5 – Banco de dados corporativo
+Escolha: Máquina Física
+
+Precisa de desempenho máximo e não vai compartilhar o servidor com outras aplicações.
+
+Desempenho: o melhor possível
+Consumo de recursos: usa 100% do servidor
+Facilidade de implantação: mais trabalhosa
+isolamento: total pq é dedicado
+compatibilidade com SO: não é um requisito no cenári
+
+Cenário 6 – Consolidação de servidores
+Escolha: Máquina Virtual
+três servidores com SOs diferentes (Windows e Linux) e baixo uso de recursos poder ter em um único servidor físico potente rodando várias VMs 
+
+desempenho: adequado, já que o uso de cppu/memória é baixo
+consumo de recursos: otimizado, um hardware potente é melhor
+facilidade de implantação: fácil migrar cada servidor físico para uma VM.
+isolamento: cada VM continua isolada das demais
+compatibilidade com SO: bom pq permite rodar Windows e Linux ao mesmo tempo no mesmo hardware
+
+Cenário 7 – Atualizações frequentes
+escolha: Container
+deployss em segundos e necessidade de escalar rapidamente novas instâncias
+
+desempenho: ótimo.
+consumo de recursos: baixo
+facilidade de implantação: ativ em segundos, sem reinstalar o ambiente.
+isolamento: adequado para a aplicação
+compatibilidade com SO: mesmo kernel base, sem necessidade de SOs diferentes.
+
+Cenário 8 – Análise de malware
+Escolha: Máquina Virtual
+
+como o objetivo é conter um possível malware uma maquina virtual tem SO isoladas, assim, evitando o risco de possíveis malwares
+
+desempenho: não é o foco, importa mais a segurança
+Consumo de recursos: maior, mas é até que bom para o objetivo
+Facilidade de implantação: VMs podem ser criadas e descartadas rapidamente
+Isolamento: máximo e o melhor para o que o cenário necessita
+Compatibilidade com SO: permite simular o SO separado do host
+z
+		
+Característica						Máquina Física	Máquina Virtual	Container
+Possui sistema operacional próprio			SIM	sim	não
+Compartilha o kernel do host?				não	não	sim
+Consome mais memória?					não	sim	não
+Inicializa mais rapidamente?				NÃO	NÃO	SIM
+Oferece maior isolamento?				SIM	SIM	NÃO
+Ideal para micros serviços?				NÃO	NÃO	SIM
+pode executar os diferentes no mesmo servidor?		NÃO	SIM	NÃO
