@@ -19,7 +19,7 @@ class Song extends Model
     protected function name(): Attribute
     {
         return Attribute::make(
-            set: fn(string $value) => Str::title($value)
+            set: fn(string $value) => Str::replace('a', 'b', $value)
         );
     }
 
@@ -27,7 +27,7 @@ class Song extends Model
     {
         return Attribute::make(
             get: fn() => sprintf(
-                '%d:%02d',
+                '%02d:%02d',
                 intdiv((int) $this->seconds, 60),
                 (int) $this->seconds % 60
             ),
